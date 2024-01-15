@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Form Validation</title>
+    <link rel="icon" href="/Images/Vidyut_Jamwal.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair:ital,wght@1,300&family=Rubik+Puddles&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        font-family: "Pacifico", cursive;
+        font-family: Playfair, serif, cursive;
+      }
+
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>DOM - Form Validation :-</h1>
+
+    <form
+      action="https://www.facebook.com"
+      target="_blank"
+      method="post"
+      name="formValidation"
+      onsubmit="return validateForm()"
+    >
+      <fieldset>
+        <legend>Form Validation</legend>
+        <label for="firstName">First Name : </label>
+        <input
+          type="text"
+          name="firstName"
+          id="firstName"
+          placeholder="First Name"
+        />
+        <br />
+        <br />
+        <label for="lastName">Last Name : </label>
+        <input
+          type="text"
+          name="lastName"
+          id="lastName"
+          placeholder="Last Name"
+        />
+        <br />
+        <br />
+
+        <label for="number">Enter a Number Between 1 to 10 : </label>
+        <input type="number" name="number" id="number" placeholder="Enter a Number between 1 to 10"> <br> <br>
+
+        <input type="submit" value="Submit Form" />
+      </fieldset>
+    </form>
+
+    <hr>
+
+    <form action="https://www.pinterest.com" method="post" id="formValidation" target="_blank">
+        <fieldset>
+            <legend>Form Validation</legend>
+            <label for="firstName">Enter Your First Name : </label>
+            <input type="text" name="firstName" id="firstName" placeholder="First Name" required> <br> <br>
+            <label for="lastName">Enter Your Last Name : </label>
+            <input type="text" name="lastName" id="lastName" placeholder="Last Name" required> <br> <br>
+            <label for="email">Enter Your Email ID : </label>
+            <input type="email" name="email" id="email" placeholder="Email Address" required> <br> <br>
+            <input type="submit" value="Submit the Form" >
+        </fieldset>
+    </form>
+
+    <script>
+      function validateForm() {
+        const firstName = document.forms["formValidation"]["firstName"].value;
+        const lastName = document.forms["formValidation"]["lastName"].value;
+        const number = document.forms["formValidation"]["number"].value;
+        if (firstName === "") {
+          alert("The field 'first name' cannot be empty");
+          return false;
+        }
+        else if(lastName === "")
+        {
+            alert("The field 'last name' cannot be empty");
+            return false;
+        }
+        else if (number === "")
+        {
+            alert("The 'number' field cannot be empty")
+            return false;
+        }
+        else if(isNaN(number) || number < 1 || number > 10)
+        {
+            alert("The number must be in the range of 1 to 10 and it should be a number, not anything else.");
+            return false;
+        }
+      }
+    </script>
+  </body>
+</html>

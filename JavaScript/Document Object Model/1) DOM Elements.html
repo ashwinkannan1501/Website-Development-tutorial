@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+    <style>
+      html,
+      body {
+        font-family: cursive;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+
+      h2 {
+        text-decoration: underline;
+      }
+
+      p#paragraph_id,
+      #paragraph_tagname {
+        text-align: justify;
+        text-indent: 5%;
+      }
+    </style>
+    <link rel="icon" href="/Images/Virat_Kohli.jpg" />
+  </head>
+  <body>
+    <h1>DOM Elements :-</h1>
+
+    <h2>Find HTML Element By ID :-</h2>
+    <p id="paragraph_id"></p>
+
+    <h2>Find HTML Elements By TagName :-</h2>
+    <p>
+      Finding HTML Elements by Tag Name This example demonstrates the
+      getElementsByTagName method. The first paragraph (index 0) inside "main"
+      is: Finding HTML Elements by Tag Name
+    </p>
+    <p id="paragraph_tagname"></p>
+
+    <h2 class="classname">Find HTML Element By Class Name :-</h2>
+    <p class="classname">
+      Finding HTML Elements by Class Name. Hello World! This example
+      demonstrates the getElementsByClassName method. The first paragraph (index
+      0) with class="intro" is: Hello World!
+    </p>
+    <p id="paragraph_classname"></p>
+
+    <h2>Find HTML Elements By Query Selector (or) CSS Selector :-</h2>
+    <p id="querySelector">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex magnam vero
+      laudantium harum reprehenderit, quo voluptatem. Omnis repellat, odit
+      eveniet, sequi tempora, iure ex perferendis recusandae voluptatem possimus
+      aspernatur ut? Ullam eum nam harum sint blanditiis, illum dolor earum
+      molestias asperiores ex sapiente nisi molestiae natus ducimus. Earum, odit
+      repellendus.
+    </p>
+    <p id="querySelectorPaste"></p>
+
+    <h2>Find HTMl Elements By HTMl Object Collection :- </h2>
+    <form action="https://www.facebook.com" method="get" target="_blank" id="registratiI
+        </fieldset>
+    </form>
+    <p>These are the values of each element in the form:</p>
+    <p id="form_submission"></p>
+
+    <h2>Fing HTML Elements BY Name :-</h2>
+    <form>
+      <fieldset>
+        <legend>Gender Form</legend>
+
+        <label for="gender">Select Your Gender :</label> <br>
+        <input type="radio" name="gender" id="male" value="Male">
+        <label for="male">Male</label> <br>
+        <input type="radio" name="gender" id="female" value="Female">
+        <label for="female">Female</label> <br>
+        <input type="radio" name="gender" id="others" value="Others">
+        <label for="others">Others</label> <br>
+
+        <p id="genderSelected"></p>
+
+        <input type="submit" value="Total Genders" onclick="totalGenders()">
+
+      </fieldset>
+    </form>
+
+    <script>
+      document.getElementById("paragraph_id").innerHTML =
+        'The easiest way to find an HTML element in the DOM, is by using the element id.\
+This example finds the element with id="intro":\
+Example\
+const element = document.getElementById("intro");\
+\
+If the element is found, the method will return the element as an object (in element).\
+\
+If the element is not found, element will contain null.';
+
+      var paragraphElement = document.getElementsByTagName("p")[1].innerHTML;
+      document.getElementById("paragraph_tagname").innerHTML = paragraphElement;
+
+      var paragraphClassName =
+        document.getElementsByClassName("classname")[0].innerHTML;
+      document.getElementById("paragraph_classname").innerHTML =
+        'The First Element of "getElementByClassName" is :- ' +
+        paragraphClassName;
+
+        var querySelector = document.querySelectorAll('p#querySelector')[0];
+        document.getElementById('querySelectorPaste').innerHTML = querySelector.innerHTML;
+
+        // const x = document.forms('registration_form');
+        // let text = '';
+
+        // for(let index = 0; index < x.length; index += 1) {
+        //     text = text + x.elements[index].value + '<br>';
+        // }
+        // document.getElementById('form_submission').innerHTML = text;
+
+        function totalGenders()
+        {
+          const gender = document.getElementsByName('gender');
+          document.getElementById('genderSelected').innerHTML = `Total Gender is : ${gender.length}`;
+        }
+
+        
+    </script>
+  </body>
+</html>

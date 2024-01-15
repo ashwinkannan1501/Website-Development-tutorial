@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <link rel="icon" href="/Images/Ashwin1.jpg">
+    <style>
+        body, html{
+            font-family: Consolas;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        h2, dd{
+            text-decoration: underline;
+        }
+        #clickPara, #clickText{
+            cursor: pointer;
+            color : rgb(121, 34, 202) ;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM - Event handling :-</h1>
+
+    <h2>Reacting to Events :-</h2>
+    <ul>
+        <li>
+            <dt>
+                <p>Example :-</p>
+                <dd>The Following example changes the element of <code><q>h1</q></code> when user clicks on it using the <strong><q>onclick</q></strong> attribute</dd>
+                <strong><p id="clickPara" onclick="resultParagraph()">Click on this text</p></strong>
+                <p id="resultPara"></p>
+            </dt>
+        </li>
+        <hr>
+        <li>
+            <dt>
+                <p>Example :-</p>
+                <dd>The Following example changes the element of <code><q>h1</q></code> when user clicks on it using the <strong><q>onclick</q></strong> attribute using a function which is called from the event handler</dd>
+                <strong><p id="clickText" onclick="changeText(this)">Click on this text</p></strong>
+            </dt>
+        </li>
+    </ul>
+
+    <hr size="4" color="black" shade="noshade">
+
+    <h2>HTML Event Attributes :-</h2>
+    <ul>
+        <li>
+            <p>Assign Events to HTML Elements :-</p>
+            <input type="button" value="Click this button to display the date & time" id="displayDate" onclick="displayDate()">
+            <p id="dateAndTime" ></p>
+        </li>
+        <hr>
+        <li>
+            <p>Assign Events using HTML DOM :-</p>
+            <p>Click <q>Display Date And Time</q> to execute the displayDate() function.</p>
+            <input type="button" value="Display Date and Time" id="dateandtime">
+            <p id="currentDate"></p>
+        </li>
+    </ul>
+
+    <script>
+        
+
+        function resultParagraph()
+        {
+            document.getElementById('resultPara').innerHTML = "Hooray!. You clicked the above text 😀🎉";
+        }
+        
+        function changeText(id)
+        {
+            id.innerHTML = "Hooray!. You clicked the text 😀🎉";
+        }
+
+        
+        function displayDate()
+        {
+            const currentDate = new Date().getDate();
+            const currentMonth = new Date().getMonth();
+            const currentYear = new Date().getFullYear();
+
+            const currentHour = new Date().getHours();
+            const currentMinutes = new Date().getMinutes();
+            const currentSeconds = new Date().getSeconds();
+
+            document.getElementById('dateAndTime').innerHTML = `Date : ${currentDate}/${currentMonth + 1}/${currentYear} | Time : ${currentHour} : ${currentMinutes} : ${currentSeconds}`;
+        }
+
+        document.getElementById('dateandtime').onclick = displayDateAndTime;
+        function displayDateAndTime()
+        {
+            const currentDate = new Date().getDate();
+            const currentMonth = new Date().getMonth();
+            const currentYear = new Date().getFullYear();
+
+            const currentHour = new Date().getHours();
+            const currentMinutes = new Date().getMinutes();
+            const currentSeconds = new Date().getSeconds();
+
+            document.getElementById('currentDate').innerHTML = `Date : ${currentDate}/${currentMonth + 1}/${currentYear} | Time : ${currentHour} : ${currentMinutes} : ${currentSeconds}`;;
+        }
+
+    </script>
+</body>
+</html>

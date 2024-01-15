@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(91, 252, 155);
+    /* background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);  */
+    margin: 0%;
+    /* font-family: 'Tangerine', serif; */
+    /* font-size: 40px; */
+    padding-left: 35%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+h1{
+    padding-left: 9%;
+    text-align: justify;
+}
+h2 {
+    padding: 0px;
+    text-align: center;
+}
+
+.registration_form{
+    text-align: center;
+    width: 400px;
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+input[type="submit"], input[type="reset"]{
+    background-color: rgb(131,58,180);
+    color: whitesmoke;
+    width: 100%;
+    border: 1px solid;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+
+
+input, label{
+    font-size: 20px;
+    padding: 7px;
+    width: 90%;
+    border-radius: 5px;
+    border-color: blueviolet;
+}
+
+.input_group{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input_group input:focus{
+    outline: 2px solid rgba(75, 7, 222, 0.542);
+}
+
+.error_prompt{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    color: red;
+    padding-top: 6px;
+}
+
+.input_group.success input{
+    border-color: green;
+}
+
+.input_group.error input {
+    border-color: red;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tables</title>
+    <link rel="icon" href="/Picturees/K_ASHWIN.jpeg">
+
+    <style>
+    
+        table, th,  tr, td {
+            border: 5px solid black;
+            border-collapse: collapse;
+            border-style:dashed;
+            border-color:greenyellow;
+            background-color: orange;
+            
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            
+        }
+
+        td#unique{
+            background-color: green;
+        }
+
+        #cellpadding{
+            padding: 50px;
+            border-collapse:separate;
+            border-spacing: 100px;
+        }
+
+       tr:nth-child(even){
+           background-color:blue;
+       }
+        
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; background-color: brown; color: white;">HTML Tables</h1>
+
+    
+    
+    <table style="width: 100%;">
+        <caption style="text-decoration: underline;"><strong>Table</strong></caption>
+        <tr>
+            <th>Full Name :-</th>
+            <th>Age :-</th>
+            <th>Branch :-</th>
+            <th>Department :-</th>
+            <th>Phone No</th>
+        </tr>
+
+        <tr>
+            <td>K. Ashwin</td>
+            <td>21</td>
+            <td>Bachelor of Engineering</td>
+            <td>Computer Science and Engineering</td>
+            <td>7401421277</td>
+        </tr>
+
+        
+
+        <tr>
+            <td>E.Gowtham</td>
+            <td>20</td>
+            <td>Bachelor of Engineering</td>
+            <td>Computer Science and Engineering</td>
+            <td>4561259385</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table style="width: 100%;">
+        <caption style="text-decoration: underline;"><strong>Table Column Width</strong></caption>
+        <tr>
+            <th style="width: 60%;">Full Name :-</th>
+            <th>Age :-</th>
+            <th>Branch :-</th>
+            <th>Department :-</th>
+            <th>Phone No</th>
+        </tr>
+
+        <tr>
+            <td>K. Ashwin</td>
+            <td>21</td>
+            <td>Bachelor of Engineering</td>
+            <td>Computer Science and Engineering</td>
+            <td>7401421277</td>
+        </tr>
+
+        
+        </tr>
+
+        <tr>
+            <td>E.Gowtham</td>
+            <td>20</td>
+            <td>Bachelor of Engineering</td>
+            <td>Computer Science and Engineering</td>
+            <td>4561259385</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table style="width: 100%;">
+        <caption style="text-decoration: underline;"><strong>Table Row Height</strong></caption>
+        <tr  style="height: 200px;">
+            <th >Full Name :-</th>
+            <th>Age :-</th>
+            <th>Branch :-</th>
+            <th>Department :-</th>
+            <th>Phone No</th>
+        </tr>
+
+        <tr>
+            <td>K. Ashwin</td>
+            <td>21</td>
+            <td>Bachelor of Engineering</td>
+            <td>Computer Science and Engineering</td>
+            <td>7401421277</td>
+        </tr>
+
+
+        <tr>
+            <td>E.Gowtham</td>
+            <td>20</td>
+            <td>Bachelor of Engineering</td>
+            <td>Computer Science and Engineering</td>
+            <td>4561259385</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table style="width: 100%;">
+        <caption  style="text-decoration:underline;"><strong>Header for Multiple Rows</strong></caption>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Age</th>
+            <th>Email Address</th>
+        </tr>
+        <tr>
+            <td>Ashwin</td>
+            <td>Kannan</td>
+            <td>22</td>
+            <td>ashwinkannan1501@gmail.com</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table style="width: 100%;">
+        <caption style="text-decoration: underline;"><strong>Header for Muliple Columns</strong></caption>
+        <tr>
+            <th rowspan="2"> Name</th>
+            <td>Ashwin</td>
+            <td>Gowtham</td>
+            
+        </tr>
+        <tr>
+            <td>Kannan</td>
+            <td>Elangovan</td>
+        </tr>
+
+        <tr>
+            <th>Age</th>
+            <td>22</td>
+            <td>21</td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <table style="width: 100%;">
+        <caption style="text-decoration: underline;"><strong>Cell Padding</strong></caption>
+        <tr>
+            <th  id="cellpadding">Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email ID</th>
+        </tr>
+
+        <tr>
+            <td id="cellpadding">K. Ashwin</td>
+            <td>22</td>
+            <td>Male</td>
+            <td>ashwinkannan1501</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table style="width: 100%; border-spacing: 30px;">
+        <caption style="text-decoration:underline"><strong>Cell Spacing (border-spacing)</strong></caption>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email ID</th>
+        </tr>
+
+        <tr>
+            <td>K. Ashwin</td>
+            <td>22</td>
+            <td>Male</td>
+            <td>ashwinkannan1501</td>
+        </tr>
+    </table>
+
+    <br>
+
+    
+</body>
+</html>

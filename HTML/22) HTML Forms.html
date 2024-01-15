@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="icon" href="/Picturees/Messi.jpg" />
+
+    <style>
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        font-size: xx-large;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      label,
+      input,
+      textarea,
+      select,
+      button {
+        font-size: x-large;
+      }
+
+      legend {
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Forms :-</h1>
+    </header>
+
+    <div>
+      <form
+        autocomplete="on"
+        action="/Picturees/Tharun Kumar.jpg"
+        target="_blank"
+        method="get"
+        accept-charset="utf-8"
+        name="form1"
+
+      >
+        <fieldset>
+          <legend>User Personal Information</legend>
+          <label for="first_name">Enter Your First Name :- </label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            required
+            placeholder="First Name"
+            autofocus
+          />
+          <br />
+          <label for="last_name">Enter Your Last Name :- </label>
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            required
+            placeholder="Last Name"
+          />
+          <br />
+
+          <label for="email_address">Enter your Email Address :- </label>
+          <input
+            type="email"
+            name="email_address"
+            id="email_address"
+            placeholder="Email Address"
+            size="25%"
+            required
+            autocomplete="off"
+          />
+          <br />
+
+          <label for="password">Enter Your Password :- </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            placeholder="Password"
+            pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{4,12}$/g"
+            autocomplete="off"
+          />
+          <br />
+
+          <label for="bio">Enter Your Biography :- </label>
+          <textarea
+            name="textarea"
+            id="textArea"
+            placeholder="Enter your Biography in this textarea"
+            rows="5"
+            cols="10"
+          ></textarea>
+          <br />
+
+          <label for="ColorPicker"
+            >Choose Your Favourite color from the color picker :-
+          </label>
+          <input
+            type="color"
+            value="ColorPicker"
+            name="color_picker"
+            id="color_picker"
+          />
+          <br />
+
+          <label for="date">Choose Your Date :- </label>
+          <input
+            type="date"
+            name="date"
+            id="date"
+            min="2019-08-17"
+            max="2023-04-29"
+          />
+          <br />
+
+          <label for="date_time_local"
+            >Enter The Current Date and Time :-
+          </label>
+          <input type="datetime-local" name="date_time" id="date_time" /> <br />
+
+          <label for="Image">Click the Image :- </label>
+          <input
+            type="image"
+            name="Image"
+            id="Image"
+            src="/Picturees/Dhoni.jpeg"
+            alt="Dhoni Pic"
+            style="width: 20%; height: 20%"
+            onclick="alert('Amazing Human Dhoni')"
+            title="MS Dhoni"
+          />
+          <br />
+
+          <label for="file">Choose Your File :- </label>
+          <input type="file" name="file" id="file" multiple /> <br />
+
+          <label for="month_year">Choose a Month and the Year :- </label>
+          <input type="month" name="month" id="month" />
+          <!-- This line of code will not work in firefox  browser-->
+          <br />
+
+          <label for="number">Enter/Choose a number :- </label>
+          <input
+            type="number"
+            min="1"
+            max="110"
+            step="5"
+            value="50"
+            placeholder="Enter any number between 1 to 110"
+            size="10%"
+          />
+          <br />
+
+          <label for="range">Choose a Range between 0 to 100 :- </label>
+          <input
+            type="range"
+            name="range"
+            id="range"
+            min="1"
+            max="100"
+            step="6"
+          />
+          <br />
+
+          <label for="search">Search something in this search box :- </label>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search here"
+          />
+          <br />
+
+          <label for="telephone">Telephone :- </label>
+          <input
+            type="tel"
+            name="telephone"
+            id="telephone"
+            pattern="[0-9]{10}"
+            title="10 digit mobile number"
+            placeholder="Enter the mobile number"
+            size="25%"
+            maxlength="10"
+          />
+          <br />
+
+          <label for="time">Choose a time :-</label>
+          <input type="time" /> <br />
+
+          <label for="URL">Enter the URL :- </label>
+          <input type="url" name="URL" id="URL" placeholder="Enter the URL" />
+          <br />
+
+          <label for="Weeks">Choose a Week :- </label>
+          <input type="week" name="week" id="week" />
+          <!-- This line of code will not work in firefox  browser-->
+          <br />
+
+          <label for="hidden_type">Hidden File :- </label>
+          <input type="hidden" value="ashwinkannan1501" /> <br />
+
+          <label for="CheckBox">Click these Checboxes</label> <br />
+          <label>Click the Checkboxes which you know :-</label> <br />
+          <input type="checkbox" value="HTML" id="html" name="html" checked />
+          <label for="HTML">HTML</label> <br />
+          <input type="checkbox" value="CSS" id="css" name="css" />
+          <label for="CSS">CSS</label> <br />
+          <input type="checkbox" value="JavaScript" id="js" name="js" />
+          <label for="JavaScript">JavaScript</label> <br />
+          <input type="checkbox" value="React" id="react" name="react" />
+          <label for="React">React</label> <br />
+
+          <label for="RadioButtons">Click any of these RadioButtons</label>
+          <br />
+          <input type="radio" name="fav_language" value="html" checked />
+          <label for="HTML">HTML</label> <br />
+          <input type="radio" name="fav_language" value="css" />
+          <label for="CSS">CSS</label> <br />
+          <input type="radio" name="fav_language" value="js" />
+          <label for="JavaScript">JavaScript</label> <br />
+
+          <label for="list">The 'list' attribute :- </label>
+          <input list="browsers" /> <br />
+          <datalist id="browsers">
+            <option value="Internet Explorer"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+          </datalist>
+
+          <input
+            type="submit"
+            name="submit_button"
+            id="SubmitButton"
+            value="Submit Button"
+          />
+          <input type="reset" value="Reset Button" />
+
+          <input
+            type="button"
+            value="Click Me! 😀"
+            onclick="alert('Welcome to Full-Stack Web Development Tutorial 🙂🙂')"
+          />
+        </fieldset>
+      </form>
+    </div>
+
+    <div>
+      <form
+        action="/12) HTML Tables.html"
+        oninput="x.value=parseInt(a.value)+parseInt(b.value)"
+        method="post"
+        target="_blank"
+        autocomplete="off"
+        accept-charset="utf-8"
+        enctype="multipart/form-data"
+        name="form2"
+        
+      >
+        <fieldset>
+          <legend>The Form Elements</legend>
+
+          <label for="full_name">Full Name :- </label>
+          <input type="text" id="full_name" placeholder="Enter Your Full Name">
+          <label for="cars">Select the Car items :- </label>
+          <select name="cars" id="cars">
+            <optgroup label="Swedish Cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars" selected>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </optgroup>
+          </select>
+          <br />
+          <br />
+
+          0
+          <input type="range" id="a" name="a" value="50" />
+          100 +
+          <input type="number" id="b" name="b" value="50" />
+          =
+          <output name="x" for="a b"></output>
+          <br /><br />
+
+          <label for="datalist_element">Datalist Element :- </label>
+          <input type="text" list="browsers" />
+          <datalist id="browsers">
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+            <option value="Chrome"></option>
+            <option value="Edge"></option>
+            <option value="FireFox"></option>
+          </datalist>
+          <br />
+          <br />
+
+          <input type="submit" value="Submit Button" />
+
+          <button type="button" onclick="alert('This is the button element')">
+            Click this Button Element
+          </button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>

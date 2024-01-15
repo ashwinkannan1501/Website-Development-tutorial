@@ -1,0 +1,80 @@
+<!--
+HTML <time> element :- 
+------------------------
+    The HTML "<time>" element defines a specific time (or) datetime format.
+    
+SYNTAX :- <time> Content </time>
+Attribues :- 
+        datetime :- It is used to transalte the time into a machine readable format so that the browsers can offer to add date reminders through the uer's calendar and search engines can produce smarter search results.
+
+Note :- The time element does not render as anything special in any of the major browsers 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Element</title>
+    <link rel="icon" href="./Picturees/K_ASHWIN.jpeg" />
+    <style>
+      h1 {
+        text-decoration: underline;
+        text-align: center;
+      }
+      h2{
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><strong>Date and Time</strong></h1>
+    <dl>
+      <dt>
+        <h2>
+          Example of <q>Time</q> Element :-
+        </h2>
+        <dd>
+            <p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+        </dd>
+      </dt>
+      <dt>
+        <h2>Example of <q>Time</q> Element with <q>DateTime</q> attribute :-</h2>
+        <dd><p>I have a date on <time datetime="2024-02-14">Valentine's day</time></p></dd>
+      </dt>
+    </dl>
+
+    <h2>Example of valid <q>datetime</q> values</h2>
+    <dl>
+        <dt><h3>Dates :-</h3></dt>
+        <dd>
+            <p><time datetime="1914">The Year <q>1914</q></time></p>  <!-- means the year 1914 -->
+            <p><time datetime="1914-12">December 1914</time> </p> <!-- means December 1914 -->
+            <p><time datetime="1914-12-20">20<sup>th</sup> December</time> </p> <!-- means 20 December 1914 -->
+            <p><time datetime="12-20">20<sup>th</sup> December of any year</time></p>  <!-- means 20 December any year -->
+            <p><time datetime="1914-W15">15<sup>th</sup> week of the year 1914</time></p>  <!-- means week 15 of year 1914 -->
+        </dd>
+
+        <dt><h3>Dates and Times :-</h3></dt>
+        <dd>
+            <p><time datetime="1914-12-20T08:00">20<sup>th</sup> December 1914 at 08:00AM</time></p>  <!-- means 20 December 1914 at 8am -->
+            <p><time datetime="1914-12-20 08:00">20<sup>th</sup> December 1914 at 08:00AM</time></p>  <!-- also means 20 December 1914 at 8am -->
+            <p><time datetime="1914-12-20 08:30:45">20<sup>th</sup> December 1914 at 08:30:45 AM</time></p>  <!-- with minutes and seconds -->
+            <p><time datetime="1914-12-20 08:30:45.687">20<sup>th</sup> December 1914 at 08:30:45.687 AM</time></p> <!-- with minutes, seconds, and milliseconds -->
+        </dd>
+
+        <dt><h3>Times :-</h3></dt>
+        <dd>
+            <p><time datetime="08:00">08:00 AM</time></p>  <!-- means 8am -->
+            <p><time datetime="08:00-03:00">05:00 AM </time>(08:00 (UTC) - 3hrs)</p>  <!-- means 8am in Rio de Janeiro (UTC-3 hours)  -->
+            <p><time datetime="08:00+03:00">11:00 AM</time> (08:00 (UTC) + 3hrs)</p>  <!-- means 8am in Madagascar (UTC+3 hours)  -->
+        </dd>
+
+        <dt><h3>Durations :-</h3></dt>
+        <dd>
+            <p><time datetime="P2D"></time></p>  <!-- means a duration of 2 days -->
+            <p><time datetime="PT15H10M"></time></p>  <!-- means a duration of 15 hours and 10 minutes -->
+        </dd>
+    </dl>
+  </body>
+</html>

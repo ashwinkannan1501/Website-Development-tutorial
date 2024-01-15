@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Table Styling</title>
+
+    <style>
+        
+      table,
+      th,
+      tr,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        border-style: dashed;
+      }
+
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+      }
+
+      tr:nth-child(even).horizontal_zebra_stripes {
+        background-color: #d6eeee;
+      }
+
+       td:nth-child(even), th:nth-child(even).vertical_zebra_stripes{
+        background-color: #d6eeee;
+      }
+
+      tr:nth-child(odd).combined_zebra_stripes {
+          background-color: #d6eeee;
+      }
+
+      td:nth-child(odd) th:nth-child(odd).combined_zebra_stripes{
+          background-color: #d6eeee;
+      }
+
+      tr.horizontal_dividers{
+          border-bottom: 2px solid black;
+      }
+
+      tr:hover.hoverable_table{
+          background-color: red;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <h1
+      style="
+        text-decoration: underline;
+        text-transform: capitalize;
+        text-align: center;
+        background-color: blueviolet;
+      "
+    >
+      Table Styling
+    </h1>
+    <table style="width: 100%">
+      <caption style="text-decoration: underline">
+        <strong>Horizontal Zebra Stripes</strong>
+      </caption>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Email Address</th>
+      </tr>
+
+      <tr class="horizontal_zebra_stripes">
+        <td>K. Ashwin</td>
+        <td>22</td>
+        <td>Male</td>
+        <td>ashwinkannan1501@gmail.com</td>
+      </tr>
+
+      
+    </table>
+
+    <br>
+    <hr size="3" noshade>
+
+    <table style="width: 100%">
+        <caption style="text-decoration: underline">
+          <strong>Vertical Zebra Stripes</strong>
+        </caption>
+        <tr >
+          <th>Name</th>
+          <th class="vertical_zebra_stripes">Age</th>
+          <th>Gender</th>
+          <th class="vertical_zebra_stripes">Email Address</th>
+        </tr>
+  
+        <tr>
+          <td class="vertical_zebra_stripes">K. Ashwin</td>
+          <td>22</td>
+          <td>Male</td>
+          <td>ashwinkannan1501@gmail.com</td>
+        </tr>
+  
+        
+      </table>
+
+      
+    <br>
+    <hr size="3" noshade>
+
+    <table style="width: 100%">
+        <caption style="text-decoration: underline">
+          <strong>Combines Vertical and Horizontal Zebra Stripes</strong>
+        </caption>
+        <tr>
+          <th>Name</th>
+          <th class="combined_zebra_stripes">Age</th>
+          <th>Gender</th>
+          <th class="combined_zebra_stripes">Email Address</th>
+        </tr>
+  
+        <tr class="combined_zebra_stripes">
+          <td class="combined_zebra_stripes">K. Ashwin</td>
+          <td>22</td>
+          <td>Male</td>
+          <td>ashwinkannan1501@gmail.com</td>
+        </tr>
+  
+        
+      </table>
+
+      <br>
+    <hr size="3" noshade>
+
+    <table style="width: 100%">
+        <caption style="text-decoration: underline">
+          <strong>Horizontal Dividers</strong>
+        </caption>
+        <tr class="horizontal_dividers">
+          <th>Name</th>
+          <th >Age</th>
+          <th>Gender</th>
+          <th>Email Address</th>
+        </tr>
+  
+        <tr class="horizontal_dividers">
+          <td>K. Ashwin</td>
+          <td>22</td>
+          <td>Male</td>
+          <td>ashwinkannan1501@gmail.com</td>
+        </tr>
+  
+        
+      </table>
+
+      <br>
+      <hr size="3" noshade>
+  
+      <table style="width: 100%">
+          <caption style="text-decoration: underline">
+            <strong>Hoverable Table</strong>
+          </caption>
+          <tr class="hoverable_table">
+            <th>Name</th>
+            <th >Age</th>
+            <th>Gender</th>
+            <th>Email Address</th>
+          </tr>
+    
+          <tr class="hoverable_table">
+            <td>K. Ashwin</td>
+            <td>22</td>
+            <td>Male</td>
+            <td>ashwinkannan1501@gmail.com</td>
+          </tr>
+    
+          
+        </table>
+  
+        
+  </body>
+</html>

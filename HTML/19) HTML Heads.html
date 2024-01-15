@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Full-stack Web Development Tutorial">
+    <meta name="author" content="K. Ashwin">
+    <meta http-eqiv="refresh" content="2">
+
+    <title>HTML Head and Layout</title>
+
+    <link rel="icon" href="/Picturees/Ronaldo.jpg" />
+    
+    <style>
+      h1 {
+        color: aliceblue;
+        background-color: black;
+        text-align: center;
+        text-decoration: underline;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+
+      p{
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: medium;
+      }
+    </style>
+
+    <script>
+        function clickme()
+        {
+            document.getElementById("practice").innerHTML = "Welcome to the full-stack web development bootcamp course by K. Ashwin";
+        }
+    </script>
+
+    <base href="/Picturees/">
+  </head>
+  <body>
+    <h1>Head and Layout Section :-</h1>
+
+    <h3>Example for 'script' element :-</h3>
+    <p>
+      This content will be changed from "Hello World!" to "Welcome to the
+      full-stack web development bootcamp course by K. Ashwin" if you press the below button
+    </p>
+
+    <p id="practice">Hello World!</p>
+    <button onclick="clickme()">Click me!</button>
+
+    <h3>Example for 'base' element :-</h3>
+    <img src="/Picturees/Ronaldo.jpg" alt="Ronaldo Picture">
+  </body>
+</html>

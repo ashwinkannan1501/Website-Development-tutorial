@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <link rel="icon" href="/Images/K_ASHWIN.jpeg" />
+
+    <style>
+      /* Element Selector */
+      hr {
+        size: 2px;
+        color: whitesmoke;
+      }
+      p {
+        text-align: justify;
+        text-shadow: 15px;
+        cursor: crosshair;
+        color: white;
+      }
+
+      body {
+        background-color: black;
+      }
+
+
+      /* Group Selector */
+      h1,
+      h3 {
+        color: white;
+        text-decoration: underline
+      }
+
+      
+      /* ID Selector */
+      #p2 {
+        background-color: white;
+        color: black;
+        font-style: italic;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      /* Class Selector */
+      p.p3{
+          text-decoration: underline;
+          cursor:cell
+      }
+
+      /* Descendant Selector and Grouping Selector */
+      ol li, legend, input{
+        color:whitesmoke;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-style: italic;
+        
+      }
+
+      li {
+        color: orangered;
+      }
+
+      /* Universal Selector */
+      *{
+          background-color: black;
+      }
+
+      /* Attribute Selector */
+      input[type="text"] {
+        font-size: 25px;
+        border: 2px solid blue;
+        cursor:copy
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">
+      CSS Selectors
+    </h1>
+
+    <h3>CSS Element Selector :-</h3>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, explicabo
+      sapiente. Tempora sequi eveniet aspernatur placeat, accusamus nam?
+      Dignissimos distinctio sit pariatur aliquam sed odit, cupiditate eligendi
+      aut maiores aspernatur deserunt voluptas est veniam minima illo quo,
+      repellendus earum, non minus perspiciatis magni! Expedita, iure error
+      obcaecati a quia quidem rerum nostrum ad dignissimos eum molestiae,
+      reprehenderit, ducimus voluptatibus ab deleniti magnam velit harum
+      laboriosam eligendi beatae. Placeat porro eaque autem sapiente cum,
+      labore, magni eligendi cupiditate adipisci voluptates quo dolore quasi
+      aperiam? Perspiciatis tempora et iure molestiae nesciunt maxime! Mollitia
+      maiores magni laboriosam eveniet ipsa itaque laborum explicabo. Quisquam
+      placeat molestiae voluptate a expedita praesentium atque dicta, sunt
+      delectus fuga fugiat! Quas delectus aliquid exercitationem dolor laborum.
+      Delectus, alias eaque quae tempore id accusamus exercitationem ipsam vel
+      odio distinctio cupiditate repellat laudantium laboriosam, eum facere
+      molestias sint doloremque quos corrupti? Officia necessitatibus inventore
+      quas cumque voluptate corrupti exercitationem odio temporibus repellendus
+      dolorum perspiciatis, architecto vel quae maxime dolorem veniam.
+      Repellendus, aliquam modi autem aut ea atque labore incidunt obcaecati
+      vitae voluptas. Doloremque, dolore quasi. Voluptate similique molestiae
+      eius dolore deserunt id porro aperiam? Assumenda cum culpa fugiat expedita
+      debitis voluptates, totam molestias id unde numquam molestiae corrupti
+      quas vero. Dolorum tempore ipsum beatae dolor asperiores deleniti? Culpa
+      ullam deserunt iste consectetur in nesciunt accusantium, corporis porro
+      vero unde cum rem et voluptates explicabo amet eos quae facilis ea omnis
+      recusandae est consequuntur optio. Beatae distinctio ratione veritatis
+      saepe eum nam et recusandae aliquid ullam aliquam ipsum minima, deserunt,
+      quaerat cupiditate! Iusto quam magnam quisquam obcaecati?
+    </p>
+
+    <hr />
+
+    <h3>CSS ID Selector :-</h3>
+    <p id="p2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolores
+      numquam necessitatibus nihil, dignissimos, in vero sit facilis quisquam
+      corrupti amet magni nesciunt molestias quod blanditiis incidunt. Ratione,
+      quia ad nesciunt blanditiis, qui commodi est error libero, mollitia
+      incidunt provident nobis et fugiat. Dolores quod deleniti eos laudantium
+      commodi magni fuga inventore recusandae quas cupiditate voluptas eveniet
+      impedit tempora illo a consectetur aspernatur pariatur, consequatur
+      reprehenderit culpa officiis. Sit maxime sequi quis consequatur eaque
+      praesentium odit minus aspernatur suscipit itaque commodi nam laboriosam
+      nisi soluta ipsam dolorem accusamus earum, illum voluptatibus. Deleniti
+      expedita sunt repellendus architecto provident ut minima delectus!
+    </p>
+
+    <hr />
+
+    <h3>CSS Class Selector :-</h3>
+    <p class="p3">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
+      blanditiis ipsum consequuntur enim facilis labore consequatur ea sunt
+      similique corrupti numquam quod molestiae deleniti hic veniam cumque
+      nobis, quo nisi quam, quos suscipit! Nemo inventore sint tenetur, tempora
+      ipsam id voluptates. Velit, accusamus aliquid! Iure qui mollitia doloribus
+      maiores recusandae labore illo magnam ea sequi dignissimos tempora atque
+      nemo ratione tenetur modi, doloremque culpa ipsam officia? Aspernatur
+      voluptatem qui, autem hic consequuntur blanditiis velit ullam soluta
+      expedita doloribus corrupti. Repellendus aperiam natus dolorem sed
+      deserunt illo vitae officiis provident obcaecati quam accusamus velit,
+      exercitationem consectetur laborum atque consequatur dignissimos impedit!
+
+      <hr>
+
+      <h3>Descendant Selector :- </h3>
+      <ol>
+        <li>Grocery</li>
+        <li>Vegetables</li>
+        <li>Chicken</li>
+        <li>Mutton</li>
+      </ol>
+
+      <ul>
+        <li>Ashwin</li>
+        <li>Kannan</li>
+        <li>Amutha</li>
+      </ul>
+
+      <hr>
+
+      <h3>Attribute Selector :- </h3>
+      <form action="" method="get">
+        <fieldset>
+          <legend>Form CSS Selectors</legend>
+          <input type="text" name="first_name" id="first_name" placeholder="First Name"> <br>
+          <input type="email" name="email" id="email" placeholder="Email Address">
+
+        </fieldset>
+      </form>
+
+      <h3>CSS Universal Selector :- </h3>
+    </p>
+  </body>
+</html>

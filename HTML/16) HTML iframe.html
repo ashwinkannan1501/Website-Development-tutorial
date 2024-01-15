@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML IFrames</title>
+    <link rel="icon" href="/Picturees/Dhoni.jpeg" />
+  </head>
+  <body>
+    <h1
+      style="
+        background-color: blueviolet;
+        font-size: xx-large;
+        text-decoration: underline;
+        text-align: center;
+      "
+    >
+      HTML Iframes
+    </h1>
+    <h3 style="font-size: x-large; text-decoration: underline">
+      Bing Website :-
+    </h3>
+    <iframe
+      src="https://www.bing.com"
+      title="This is the Microsoft's bing website"
+      
+      style="height: 40vw; width: 100%; border: 5px solid tomato;"
+    ></iframe>
+
+    <hr size="3" noshade />
+
+    <h3 style="font-size: x-large; text-decoration: underline">
+      Javatpoint Website :-
+    </h3>
+    <iframe
+      src="https://www.javatpoint.com"
+      title="This is Javatpoint Website"
+      frameborder="0"
+      style="height: 40vw; width: 100%; border: 5px solid red"
+    ></iframe>
+
+    <hr size="3" noshade />
+
+    <h3 style="font-size: x-large; text-decoration: underline">
+      GeeksForGeeks Website :-
+    </h3>
+    <iframe
+      src="https://www.geeksforgeeks.com"
+      title="This is GeeksForGeeks website"
+      frameborder="0"
+      style="height: 40vw; width: 100%; border: 5px solid black"
+    ></iframe>
+
+    <h3>Link to Bing Website :-</h3>
+    <iframe
+      src="new.html"
+      frameborder="0"
+      style="height: 40vw; width: 100%; border: 5px solid blue"
+      name="bing_frame"
+    ></iframe>
+    <p
+      style="
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    >
+      <a href="https://www.bing.com" target="bing_frame"
+        >Click this link to open bing website</a
+      >
+    </p>
+    <p
+      style="
+        font-size: large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      "
+    >
+      The name of iframe and link target must have same value else link will not
+      open as a frame.
+    </p>
+  </body>
+</html>

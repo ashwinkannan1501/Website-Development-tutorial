@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Lists</title>
+    <link rel="icon" href="/Picturees/K_ASHWIN.jpeg" />
+
+    <style>
+      table,
+      th,
+      td {
+        padding: 15px;
+        border: 5px solid black;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      ol.numbers {
+        list-style-type: decimal;
+        font-size: x-large;
+      }
+
+      ol.uppercase_letters {
+        list-style-type: upper-alpha;
+        font-size: x-large;
+      }
+
+      ol.lowercase_letters {
+        list-style-type: lower-alpha;
+        font-size: x-large;
+      }
+
+      ol.uppercase_roman {
+        list-style-type: upper-roman;
+        font-size: x-large;
+      }
+
+      ol.lowercase_roman {
+        list-style-type: lower-roman;
+        font-size: x-large;
+      }
+
+      ul.list_project {
+        list-style-type: none;
+        padding: 0;
+        overflow:auto;
+        background-color: #333333;
+      }
+
+      a {
+        display:block;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        text-decoration: underline;
+        float: left;
+      }
+
+      a:hover {
+        background-color: #111111;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1
+      style="
+        text-decoration: underline;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: blueviolet;
+        color: whitesmoke;
+      "
+    >
+      HTML Lists
+    </h1>
+
+    <h2 style="text-decoration: underline; text-transform: uppercase">
+      <em>Examples of HTML Lists :-</em>
+    </h2>
+
+    <table style="width: 100%">
+      <tr>
+        <th style="text-decoration: underline">Unordered HTML Lists</th>
+        <th style="text-decoration: underline">Ordered HTML Lists</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+          </ul>
+        </td>
+        <td>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+          </ol>
+        </td>
+      </tr>
+    </table>
+
+    <h2 style="text-decoration: underline; text-transform: uppercase">
+      <em>Another Example of HTML Lists :-</em>
+    </h2>
+    <h3
+      style="
+        text-align: center;
+        text-decoration: underline;
+        font-size: xx-large;
+      "
+    >
+      Welcome to GeeksForGeeks Learning
+    </h3>
+    <p
+      style="
+        text-decoration: underline;
+        font-style: italic;
+        font-size: xx-large;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      "
+    >
+      List of available courses :-
+    </p>
+
+    <ul style="font-size: x-large">
+      <li>Data Structures and Algorithms</li>
+      <li>Web Technology</li>
+      <li>Aptitude and Logical Reasoning</li>
+      <li>Programming Languages</li>
+    </ul>
+
+    <p
+      style="
+        text-decoration: underline;
+        font-style: italic;
+        font-size: xx-large;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      "
+    >
+      Data Structures Topic :-
+    </p>
+
+    <ol style="font-size: x-large">
+      <li>Arrays</li>
+      <li>Linked List</li>
+      <li>Stacks</li>
+      <li>Queues</li>
+      <li>Trees</li>
+      <li>Graphs</li>
+    </ol>
+
+    <br />
+    <hr size="3" noshade color="black" />
+    <br />
+
+    <h2
+      style="
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-style: italic;
+        text-align: center;
+      "
+    >
+      Unordered List :-
+    </h2>
+    <h3
+      style="font-size: x-large; font-style: italic; text-decoration: underline"
+    >
+      Grocery List :-
+    </h3>
+    <ul style="font-size: x-large">
+      <li type="disc">Bread</li>
+      <li type="circle">Eggs</li>
+      <li type="square">Milk</li>
+      <li type="None">Coffee</li>
+    </ul>
+
+    <br />
+    <hr size="3" noshade color="black" />
+    <br />
+
+    <h2
+      style="
+        text-decoration: underline;
+        text-transform: uppercase;
+        font-style: italic;
+        text-align: center;
+      "
+    >
+      Ordered List :-
+    </h2>
+
+    <h3
+      style="font-size: x-large; font-style: italic; text-decoration: underline"
+    >
+      Milk Product List :-
+    </h3>
+
+    <ol style="font-size: x-large">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <hr align="left" size="3" width="25%" noshade />
+
+    <h3
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      The 'list-style-type' CSS attribute :-
+    </h3>
+    <p
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      Decimal numbers :-
+    </p>
+    <ol class="numbers">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <p
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      Uppercase Alphabets:-
+    </p>
+    <ol class="uppercase_letters">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <p
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      Lowercase Alphabets:-
+    </p>
+    <ol class="lowercase_letters">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <p
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      Uppercase Roman Numbers:-
+    </p>
+    <ol class="uppercase_roman">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <p
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      Lowercase Roman Numbers:-
+    </p>
+    <ol class="lowercase_roman">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <hr align="left" size="3" width="25%" noshade />
+
+    <h3
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      Start attribute :-
+    </h3>
+    <ol start="50" style="font-size: x-large">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <hr align="left" size="3" width="25%" noshade />
+
+    <h3
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      Reversed Attribute :-
+    </h3>
+    <ol start="50" style="font-size: x-large" reversed>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <br />
+    <hr size="3" noshade color="black" />
+    <br />
+
+    <h2
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      A Simple Description List :-
+    </h2>
+    <dl style="font-size: x-large">
+      <dt>Coffee</dt>
+      <dd>- A coffee is full of caffine content (500gms)</dd>
+      <dt>Tea</dt>
+      <dd>- Green Tea is good for health</dd>
+      <dt>Milk</dt>
+      <dd>- Milk is full of lactose content</dd>
+    </dl>
+
+    <hr size="3" align="left" width="35%" noshade />
+
+    <h2
+      style="text-decoration: underline; font-size: x-large; font-style: italic"
+    >
+      A Description List within a Unordered/Ordered List:-
+    </h2>
+    <ol style="font-size: x-large">
+      <dl>
+        <dt>
+          <li>Coffee</li>
+        </dt>
+        <dd>Coffee is full of caffine content</dd>
+      </dl>
+      <li>Tea</li>
+      <li>Green Tea</li>
+      <li>Black Coffee</li>
+      <li>Milk</li>
+    </ol>
+
+    <br />
+    <hr size="3" noshade color="black" />
+    <br />
+
+    <h1
+      style="text-align: center; text-decoration: underline; font-style: italic"
+    >
+      A Simple Project Using HTMl Lists
+    </h1>
+    <h2
+      style="font-size: x-large; font-style: italic; text-decoration: underline"
+    >
+      Navigation Menu :-
+    </h2>
+    <ul class="list_project">
+      <li class="home"><a href="#home">Home</a></li>
+      <li class="contact"><a href="#contact">Contact</a></li>
+      <li class="news"><a href="#news">News</a></li>
+      <li class="about"><a href="#about">About</a></li>
+    </ul>
+  </body>
+</html>

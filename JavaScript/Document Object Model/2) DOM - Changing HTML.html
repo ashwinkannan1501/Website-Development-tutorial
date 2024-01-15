@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changing HTML</title>
+    <link rel="icon" href="/Images/Vidyut_Jamwal.jpeg" />
+
+    <style>
+        html, body{
+            font-family: Arial, Helvetica, sans-serif, cursive;
+        }
+
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        h2{
+            text-decoration: underline;
+        }
+
+        p{
+            text-align: justify;
+            text-indent: 3%;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>HTML DOM - Changing HTML</h1>
+
+    <h2>Changing HTML Content - <q><strong>innerHTML</strong></q> property :- </h2>
+    <p id="changingHTMLContent">Hello World!</p>
+    <hr>
+
+    <h2>Changing the Value of the attribute - <q><strong>CSS attribute</strong></q></h2>
+    <img src="/Images/Vidyut_Jamwal.jpeg" alt="Vidyut Jamwal Picture" title="Vidyut Jamwal" id="image"> <br>
+    <input type="button" value="Change the Picture" onclick="changeImage()">
+    <hr>
+
+    <h2>Dynamic HTML Content :-</h2>
+    <p id="dynamicContent"></p>
+    <hr>
+
+    <h2>Overwiriting HTML Content :-</h2>
+    <p id="overwritingContent"></p>
+    
+
+    <script>
+        function changeImage()
+        {
+            document.getElementById('image').src = '/Images/Virat_Kohli.jpg';
+            document.getElementById('image').alt = 'Virat Kohli Image';
+        }
+
+        const changingHTMLContent = document.getElementById("changingHTMLContent");
+        changingHTMLContent.innerHTML = `The text is changing from "${changingHTMLContent.innerHTML}" to "Welcome to the world of web development 😀"`;
+
+        document.getElementById('dynamicContent').innerHTML = `The Current Date & Time is : ${Date()}`;
+
+        document.getElementById('overwritingContent').innerHTML = `The HTML document is overwritten by the '<code>document.write()</code>' method`;
+        document.write(Date());
+        
+    </script>
+  </body>
+</html>

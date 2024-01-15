@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Exrecise</title>
+    <link rel="icon" href="/Images/K_ASHWIN.jpeg">
+
+    <style>
+
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        html, body {
+            margin: 5px 5px;
+            padding: 5px;
+        }
+
+        fieldset, legend{
+            border: 2px solid red;
+            border-radius: 15px;
+        }
+
+        input, button{
+            border-radius: 3px;
+        }
+
+         input:hover{
+            border: 3px solid blue;
+        }
+
+        #submit:hover{
+            border: 3px solid green 
+        }
+
+         /* input:active{
+            border: 3px solid green;
+        } */
+    </style>
+</head>
+<body>
+    <h1>CSS Border Exrecise :-</h1>
+
+    <form action="/8) CSS Background Attachment.html" method="get" target="_blank">
+        
+        <fieldset id="fieldset">
+            <legend id="legend">Form Borders</legend>
+
+            <label for="first_name">Enter Your First Name : </label>
+            <input type="text" name="first_name" id="first_name" placeholder="First Name" required> <br> <br>
+
+            <label for="last_name">Enter Your Last Name : </label>
+            <input type="text" name="last_name" id="last_name" placeholder="Last Name" required> <br> <br>
+
+            <label for="age">Enter Your Age : </label>
+            <input type="number" name="age" id="age" placeholder="Age" min="1" max="110" required> <br> <br>
+
+            <button type="submit" id="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

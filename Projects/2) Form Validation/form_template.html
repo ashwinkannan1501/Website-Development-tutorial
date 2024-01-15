@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5 " />
+    <title>Form Validation</title>
+    <link rel="icon" href="/K_ASHWIN.jpeg" />
+
+    <link rel="stylesheet" href="/form_styling.css" />
+    <script src="/form_function.js" defer></script>
+    <!-- The 'defer' attribute is used to load the JS file after HTML file-->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Form Validation</h1>
+
+      <div>
+        <form action="" method="get" class="registration_form">
+            <h2 >Registration Form</h1>
+          <fieldset>
+            <legend>Form Validation</legend>
+
+            <div class="input_group">
+              <input type="image" src="/K_ASHWIN.jpeg" alt="Profile Pic of K. Ashwin">
+            </div>
+            
+            <div class="input_group">
+              <input
+                type="text"
+                required
+                placeholder="First Name"
+                name="first_name"
+                id="first_name"
+                autofocus
+              />
+              <div class="error_prompt">Error Message</div>
+            </div>
+
+            <div class="input_group">
+              <input
+                type="text"
+                required
+                placeholder="Last Name"
+                name="last_name"
+                id="last_name"
+              />
+              <div class="error_prompt"></div>
+            </div>
+
+            <div class="input_group">
+              <input type="number" name="age" id="age" placeholder="Age" name="age" required min="18" max="80">
+              <div class="error_prompt"></div>
+            </div>
+
+            <div class="input_group">
+              <input
+                type="email"
+                required
+                placeholder="Email Address"
+                name="email_address"
+                id="email_address"
+              />
+              <div class="error_prompt"></div>
+            </div>
+
+            <div class="input_group">
+              <input type="tel" required placeholder="Phone Number" name="phoneNo" id="phoneNo">
+              <div class="error_prompt"></div>
+            </div>
+            <div class="input_group">
+              <input
+                type="password"
+                required
+                placeholder="Password"
+                class="password"
+                id="password"
+              />
+              <div class="error_prompt"></div>
+            </div>
+
+            <div class="input_group">
+              <input
+                type="password"
+                required
+                placeholder="Confirm Password"
+                class="confirm_password"
+                id="confirm_password"
+              />
+              <div class="error_prompt"></div>
+            </div>
+
+            <div class="input_group">
+              <label for="color_palette">Choose color from the palette</label>
+              <input type="color" placeholder="Choose Your Color " id="color_palette" name="color_palette">
+            </div>
+
+            <div class="input_group">
+              <label for="">Select the file</label>
+              <input type="file" id="file" name="file" multiple >
+            </div>
+
+            <div class="input_group">
+              <label for="DOB">Select your DOB</label>
+              <input type="date" name="DOB" id="DOB">
+            </div>
+
+            <div class="input_group">
+              <label for="time">Choose the Wake up time</label>
+              <input type="time" name="time" id="time">
+            </div>
+
+            <div class="input_group">
+              <input type="url" name="url" id="url">
+            </div>
+
+            
+
+            <input type="submit" value="Register" class="register_button"/> <br><br>
+            <input type="reset" value="Clear" class="reset_button">
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

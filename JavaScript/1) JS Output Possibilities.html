@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Full Master Course</title>
+    <link rel="icon" href="/" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair:ital,wght@1,300&family=Rubik+Puddles&display=swap");
+
+      body,
+      html {
+        font-family: "Pacifico", cursive;
+        font-family: "Playfair", serif;
+      }
+
+      h1{
+          text-align: center;
+          text-decoration: underline;
+          font-size: xx-large;
+      }
+
+      h2{
+          text-decoration: underline;
+          font-size: x-large;
+      }
+
+      p{
+          font-size:larger;
+          text-indent: 30px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Output Possibilities</h1>
+
+    <h2>1) Writing into an HTML Element using <q>innerHTML</q></h2>
+
+    <p id="innerHTML"></p>
+
+    <h2>2) Writing into an HTML Output using <q>document.write()</q> method</h2>
+
+    <h2>3) Writing into an alert box using <q>window.alert()</q> method</h2>
+
+    <h2>4) Writing into the browser console using <q>console.log()</q> method</h2>
+
+    <script>
+      document.getElementById("innerHTML").innerHTML = "Lorem";
+
+      document.write("Writing into an HTML Output using document.write() method");
+
+      window.alert("This is the alert message");
+
+      console.log("This is the console message");
+    </script>
+  </body>
+</html>

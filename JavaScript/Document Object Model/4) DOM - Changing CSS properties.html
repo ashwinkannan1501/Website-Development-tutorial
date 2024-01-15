@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Changing CSS Properties</title>
+    <link rel="icon" href="/Images/Ashwin1.jpg" />
+    <style>
+      html,
+      body {
+        font-family: cursive, Cambria, Cochin, Georgia, Times, "Times New Roman",
+          serif;
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      h2 {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Changing CSS Properties using HTML DOM :-</h1>
+    <div id="cssDiv">
+      <ol type="I">
+        <li><h2>Chaning CSS Color Properties :-</h2></li>
+        <p id="cssPara">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Necessitatibus error velit, itaque aliquam voluptatem aut culpa sequi
+          ipsa aliquid iure fugit delectus earum libero
+          <code>dicta? Esse autem,</code>
+          ipsum, officiis deserunt eaque animi nostrum explicabo quod placeat
+          illum, rem ducimus? Vero consequatur cumque sequi eveniet nihil
+          tempora quia eligendi, autem aliquid omnis quidem labore magnam,
+          cupiditate a temporibus dolorem qui. Magnam, obcaecati iusto corrupti
+          aperiam nostrum consectetur atque autem saepe vero error
+          exercitationem, et aliquam tenetur quaerat asperiores tempore! Beatae
+          voluptates reiciendis sapiente enim corrupti culpa possimus officiis!
+          Numquam ipsam corporis iste, aspernatur architecto atque itaque sint
+          quis libero dolores fugit.
+        </p>
+        <input
+          type="button"
+          value="Click this button to change the paragrapgh color into red & black"
+          onclick="changeParagraphColor()"
+        />
+
+        <hr />
+
+        <li><h2>Changing the Visibility of the text :-</h2></li>
+        <p id="paraVisibility">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
+          autem amet officiis delectus aliquid minima nam nostrum assumenda
+          voluptatibus repudiandae omnis quidem quaerat tempora minus provident
+          aut non nesciunt ab incidunt qui est quae! Quaerat necessitatibus ipsa
+          ullam eaque dolorem molestiae quasi corporis earum dolorum. Deleniti
+          provident possimus sint atque laudantium accusantium perferendis
+          mollitia id! Aut nam quibusdam in sed totam cumque illum amet,
+          distinctio at. Quidem itaque, tempora minus illo labore, veniam
+          excepturi, blanditiis ad eaque quod esse eligendi dignissimos corporis
+          aperiam obcaecati ratione officia necessitatibus fugit quae nostrum ut
+          voluptates nesciunt? Necessitatibus ad at nam autem dolores optio.
+        </p>
+        <input type="button" name="visible" id="visible" value="Show Text" onclick="document.getElementById('paraVisibility').style.visibility = 'visible'">
+        <input type="button" name="invisible" id="invisible" value="Hide Text" onclick="document.getElementById('paraVisibility').style.visibility = 'hidden'">
+      </ol>
+    </div>
+
+    <script>
+      const cssDivElement = document.getElementById("cssDiv");
+      cssDivElement.style.backgroundColor = "#CF9FFF";
+      cssDivElement.style.border = "3px solid black";
+      cssDivElement.style.borderRadius = "0%";
+
+      function changeParagraphColor() {
+        const color = document.getElementById("cssPara").style.color;
+        if (color === "red") {
+          document.getElementById("cssPara").style.color = "black";
+        } else {
+          document.getElementById("cssPara").style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

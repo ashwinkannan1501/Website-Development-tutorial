@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Images</title>
+    <link rel="icon" href="/Picturees/K_ASHWIN.jpeg">
+
+    <style>
+        body{
+            background-image: url('/Picturees/Sunil\ Chettri.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+    <script>
+        function pressed()
+        {
+            alert("You Clicked the greenland area");
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <h1 style="text-decoration: underline; font-style:oblique; background-color: blueviolet; text-align: center;">HTML Images</h1>
+
+    <h2 style="text-decoration: underline;">Image Tag Examples :=</h2>
+    <img src="/Picturees/K_ASHWIN.jpeg" alt="Ashwin Image" width="25%" height="25%" title="This is K. Ashwin Image" style="border-radius: 50%;"> 
+    <img src="/Picturees/virat kohli.jpg" alt="Virat Kohli" width="25%" height="25%" title="This is Virat Kohli Image">
+    <img src="/Picturees/Sunil Chettri.webp" alt="Sunil Chettri" width="25%" height="25%" title="This is Sunil Chetri Image">
+    <img src="/Picturees/Ronaldo.jpg" alt="Ronaldo" width="50%" height="50%" title="This is Cristiano Ronaldo Image">
+    <img src="/Picturees/Tharun Kumar.jpg" alt="Tharun Kumar" width="25%" height="25%" title="This is Tharun Kumar Image" style="border-radius:20%;align-items: flex-end;"> 
+    <hr color="Orange">
+
+    <br>
+    <h2 style="text-decoration: underline;">Use Image as a link :=</h2>
+    <a href="https://www.youtube.com/@tharunkumar_" target="_blank">
+        <img src="/Picturees/Tharun Kumar.jpg" alt="Tharun Kumr" title="Tharun Kumar" style="width:25%; height:25%">
+    </a>
+
+    <br>
+    <hr color="black">
+
+    <h2 style="text-decoration: underline;">Image Map</h2>
+    <img src="/Picturees/World Map.webp" alt="World Map"  usemap="#worldmap">
+    <map name="worldmap">
+        <area shape="rect" coords="344, 179, 606, 152" href="https://en.wikipedia.org/wiki/President_of_Russia" alt="Article about President of Russia" target="_blank">
+        <area shape="circle" coords="144, 173, 83" href="https://pm.gc.ca/en/about#:~:text=The%20Right%20Honourable%20Justin%20Trudeau%2C%20Prime%20Minister%20of%20Canada&text=Justin%20Trudeau%20(born%20December%2025,and%20fair%20chance%20to%20succeed." alt="Article about President of Canada" target="_blank">
+        <area shape="poly" coords="422, 232, 414, 258, 442, 256, 426, 280" href="https://en.wikipedia.org/wiki/President_of_India" alt="Article about President of India" target="_blank">
+        <area shape="circle" coords="234, 110, 83" href="https://en.wikipedia.org/wiki/Prime_Minister_of_Greenland" alt="Article of Greenland President" onclick="pressed()" target="_blank">
+        
+    </map>
+
+    <h2 style="text-transform: uppercase; text-decoration: underline ;">The picture Element</h2>
+
+<picture>
+  <source media="(min-width: 300px)" srcset="/Picturees/Dhoni.jpeg">
+  <source media="(min-width: 465px)" srcset="/Picturees/Messi.jpg">
+  <img src="/Picturees/Tharun Kumar.jpg" style="width: 25%;">
+</picture>
+
+<hr align="center" noshade size="10" color="red" width="1000">
+
+
+
+</body>
+</html>

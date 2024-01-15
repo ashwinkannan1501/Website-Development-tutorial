@@ -1,0 +1,7 @@
+/* External Style Sheet */
+p#para3{
+    text-indent: 40px;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+}

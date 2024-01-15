@@ -1,0 +1,14 @@
+let bigInt1 = 45612378945n;
+let bigInt2 = BigInt(1234567890369);
+console.log(bigInt1 + "\n" + bigInt2);
+console.log(typeof(bigInt1) + "\n" + typeof(bigInt2));
+console.log(Number.MIN_SAFE_INTEGER);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.isInteger(3));
+console.log(Number.isInteger(5.69));
+console.log(Number.isSafeInteger(56));
+console.log(Number.isSafeInteger(45678912362626245621115151));
+console.log(Number.isNaN(5/0));
+console.log(Number.isFinite(56));
+console.log(Number.MIN_VALUE);
+console.log(Number.MAX_VALUE);
