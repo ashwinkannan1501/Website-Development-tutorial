@@ -22,7 +22,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="checkCookies()" onunload="thankUsers()">
     <h1>DOM - Event handling :-</h1>
 
     <h2>Reacting to Events :-</h2>
@@ -62,6 +62,41 @@
             <p id="currentDate"></p>
         </li>
     </ul>
+
+    <hr>
+    <h2>The <q><strong>onload</strong></q> attribute / Events :-</h2>
+    <dd>The <q><strong>onload</strong></q> arrtribute / event is used to execute automatically when the web-page is loaded</dd>
+    <p id="onloadEvent"></p>
+    <p id="loading"></p>
+
+    <hr>
+
+    <h2>The <q><strong>oninput</strong></q> attribute / event :-</h2>
+    <label for="firstName">Enter Your First Name :- </label>
+    <input type="text" name="firstName" id="firstName" placeholder="First Name" oninput="convertToUpperCase()">
+    <label for="email">Enter Your Email Address : </label>
+    <input type="email" id="email" name="email" placeholder="someone@gmail.com" oninput="liveTranscribeText()">
+    <p id="transcribeResult"></p>
+    <input type="range" name="rangeSelector" id="rangeSelector" min="100" max="500" step="50" oninput="rangeTracker(this.value)">
+    <p id="rangeResult"></p>
+
+    <h2>The <q><strong>onchange</strong></q> event :-</h2>
+    <label for="fullname">Enter Your Full Name : </label>
+    <input type="text" name="fullName" id="fullName" placeholder="Full Name (First Name + Last Name)">
+    <p id="greeting"></p>
+
+    <p style="text-decoration: underline;">Selecter a new car from the list</p>
+    <select name="cars" id="cars">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Porsche">porsche</option>
+        <option value="Ferrari">Ferrari</option>
+        <option value="Skoda">Skoda</option>
+        <option value="Volks Wagon">Volks Wagon</option>
+    </select>
+    <p id="chosenCar"></p>
 
     <script>
         
@@ -103,6 +138,53 @@
 
             document.getElementById('currentDate').innerHTML = `Date : ${currentDate}/${currentMonth + 1}/${currentYear} | Time : ${currentHour} : ${currentMinutes} : ${currentSeconds}`;;
         }
+
+        function checkCookies()
+        {
+            let cookies = "";
+            if(navigator.cookieEnabled === true)
+            {
+                cookies = "The Cookies are enabled for this web-page";
+            }
+            else {
+                cookies = "The Cookies are not enables / disabled for this web-page";
+            }
+            document.getElementById('onloadEvent').innerHTML = cookies;
+            document.getElementById('loading').innerHTML = "The Web Page loads successfully";
+        }
+
+        function thankUsers()
+        {
+            alert("Thank You for visiting this page");
+        }
+
+        function convertToUpperCase()
+        {
+            const text = document.getElementById('firstName');
+            text.value =  text.value.toUpperCase();
+        }
+
+        function liveTranscribeText()
+        {
+            const emailID = document.getElementById('email').value;
+            document.getElementById('transcribeResult').innerHTML = `The Email ID is : ${emailID}`;
+        }
+
+        function rangeTracker(value)
+        {
+            document.getElementById('rangeResult').innerHTML = `Your current range value is : ${value}`;
+        }
+
+        document.getElementById('fullName').onchange = function(){
+            let fullName = document.getElementById('fullName').value;
+            document.getElementById('greeting').innerHTML = `Full Name : ${fullName}`;
+        }
+
+        document.getElementById('cars').addEventListener('change', function()
+        {
+            const car = document.getElementById('cars').value;
+            document.getElementById('chosenCar').innerHTML = `You Chose the ${car} car`;
+        })
 
     </script>
 </body>
