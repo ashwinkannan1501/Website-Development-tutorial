@@ -20,6 +20,13 @@
             cursor: pointer;
             color : rgb(121, 34, 202) ;
         }
+
+        p#mouseover, p#mouseout, p#mouseoverandout, p#mousedownandup{
+            background-color: red;
+            color: white;
+            font-size: larger;
+            cursor:crosshair;
+        }
     </style>
 </head>
 <body onload="checkCookies()" onunload="thankUsers()">
@@ -80,6 +87,8 @@
     <input type="range" name="rangeSelector" id="rangeSelector" min="100" max="500" step="50" oninput="rangeTracker(this.value)">
     <p id="rangeResult"></p>
 
+    <hr>
+
     <h2>The <q><strong>onchange</strong></q> event :-</h2>
     <label for="fullname">Enter Your Full Name : </label>
     <input type="text" name="fullName" id="fullName" placeholder="Full Name (First Name + Last Name)">
@@ -98,8 +107,30 @@
     </select>
     <p id="chosenCar"></p>
 
+    <hr>
+
+    <h1>Mouse Events :-</h1>
+    <h2>The <q><strong>onmouseover</strong></q> event :-</h2>
+    <p id="mouseover" onmouseover="onMouseOverEvent(this)">Move the Mouse Over me 😀</p>
+
+    <hr>
+
+    <h2>The <q><strong>onmouseout</strong></q> event :-</h2>
+    <p id="mouseout" onmouseout="onMouseOutEvent(this)">Move out the mouse from me 🤬</p>
+
+    <hr>
+
+    <h2>Combination of both <q><strong>onmouseover</strong></q> event and <q><strong>onmouseout</strong></q> event :-</h2>
+    <p id="mouseoverandout">Please hover your mouse / trackpad over me 😌🙏</p>
+
+    <hr>
+
+    <h2>The Combination of <q><strong>onmousedown</strong></q>, <q><strong>onmouseup</strong></q> & <q><strong>onclick</strong></q> Event :-</h2>
+    <p id="mousedownandup" onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" >Click Me! 😀😀</p>
+    
+
+
     <script>
-        
 
         function resultParagraph()
         {
@@ -185,6 +216,35 @@
             const car = document.getElementById('cars').value;
             document.getElementById('chosenCar').innerHTML = `You Chose the ${car} car`;
         })
+
+        function onMouseOverEvent(element)
+        {
+            element.innerHTML = `Thank You for hovering me 😍`;
+        }
+
+        function onMouseOutEvent(element)
+        {
+            element.innerHTML = `Please Hover Me 😌🙏`
+        }
+
+        document.getElementById('mouseoverandout').addEventListener('mouseover', () => {
+            document.getElementById('mouseoverandout').innerHTML = `Thank You for hovering me 😍`;
+        });
+
+        document.getElementById('mouseoverandout').addEventListener('mouseout', () => {
+            document.getElementById('mouseoverandout').innerHTML = `Please Hover me again with your mouse / trackpad 🙏😌`;
+        });
+
+        const mouseDown = (object) => {
+            object.innerHTML = `Release Me! 😌`;
+        }
+
+        const mouseUp = (object) => {
+            object.innerHTML = `Thank You . Please click me again! 😌😀🎉`;
+        }
+
+       
+       
 
     </script>
 </body>
