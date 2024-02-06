@@ -27,9 +27,30 @@
             font-size: larger;
             cursor:crosshair;
         }
+
+        div {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div#mouseMoveContainer{
+            width: 500px;
+            height: 200px;
+            
+        }
+
+        div#container{
+            width: 500px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            background-color: lightgray;
+        }
     </style>
 </head>
-<body onload="checkCookies()" onunload="thankUsers()">
+<body onload="checkCookies()" onunload="thankUsers()" ononline="onlineEvent()" onoffline="offlineEvent()">
     <h1>DOM - Event handling :-</h1>
 
     <h2>Reacting to Events :-</h2>
@@ -71,6 +92,11 @@
     </ul>
 
     <hr>
+
+    <h2>The <q><strong>ondbclick</strong></q> event :-</h2>
+    <input type="button" id="doubleClick" name="doubleClick" value="Double Click Me !🙂🙂" ondblclick="displayParagraph()">
+    <p id="displayedParagraph"></p>
+
     <h2>The <q><strong>onload</strong></q> attribute / Events :-</h2>
     <dd>The <q><strong>onload</strong></q> arrtribute / event is used to execute automatically when the web-page is loaded</dd>
     <p id="onloadEvent"></p>
@@ -127,7 +153,83 @@
 
     <h2>The Combination of <q><strong>onmousedown</strong></q>, <q><strong>onmouseup</strong></q> & <q><strong>onclick</strong></q> Event :-</h2>
     <p id="mousedownandup" onmousedown="mouseDown(this)" onmouseup="mouseUp(this)" >Click Me! 😀😀</p>
-    
+
+    <hr>
+
+    <h2>The <q><strong>oncontextmenu</strong></q> event :-</h2>
+    <div>
+        <p>Right Click on this box, <q>contextmenu</q> will show up</p>
+    </div> <br>
+    <div id="contextmenu">
+        <p>Right Click on this box, <q>contextmenu</q> will not show up</p>
+    </div>
+
+    <hr/>
+
+    <h2>The Combination of <q><strong>onmouseenter</strong></q> and <q><strong>onmouseleave</strong></q> event :-</h2>
+    <img src="/Images/Ashwin1.jpg" alt="Ashwin Proile Picture" title="K. Ashwin" width="300px" height="400px" id="image" onmouseenter="changePicture(this)" onmouseleave="originalPicture(this)">
+
+    <hr>
+
+    <h2>The <q><strong>onmousemove</strong></q> event :-</h2>
+    <div id="mouseMoveContainer" onmousemove="mouseCoordinates(event)" onmouseleave="clearCoordinates()"></div>
+    <p id="mouseMoveCoordinates"></p>
+
+    <hr>
+
+    <h2>Demonstration of all <q><strong>mouse moving</strong></q> events :-</h2>
+    <div id="container" onmouseover="mouseOverFunction()">
+        <h4>onmouseover Event :-</h4>
+        <p>Move Mouse Over me 🙂</p>
+        <p id="mouseoverDemo"></p>
+    </div>
+    <div id="container" onmouseout="mouseOutFunction()">
+        <h4>onmouseout Event :-</h4>
+        <p>Move your mouse out of me ! 👿😡🤬</p>
+        <p>Mouse Over & leave me</p>
+        <p id="mouseoutDemo"></p>
+    </div>
+    <div id="container" onmouseenter="mouseEnterFunction()">
+        <h4>onmouseenter Event :-</h4>
+        <p>Please Enter your mouse pointer inside this container</p>
+        <p id="mouseenterDemo"></p>
+    </div>
+    <div id="container" onmouseleave="mouseLeaveFunction()">
+        <h4>onmouseleave Event :-</h4>
+        <p>Move your mouse pointer away from me 😌🙏</p>
+        <p id="mouseleaveDemo"></p>
+    </div>
+    <div id="container" onmousemove="mouseMoveFunction()">
+        <h4>onmousemove Event :-</h4>
+        <p>Move your mouse on me 🙂🤝</p>
+        <p id="mousemoveDemo"></p>
+    </div>
+    <div id="container" oncontextmenu="contextMenuFunction(event)">
+        <h4>oncontextmenu Event :-</h4>
+        <p>Right Click on this menu, nothing will happen</p>
+    </div>
+
+    <hr/>
+
+    <h2>The <q><strong>ononline</strong></q> and <q><strong>onoffline</strong></q> event :-</h2>
+    <p>The above events will tell whether the browser is in offline or online</p>
+    <p><strong>NOTE :-</strong> There will only be an "output" from this example when the browser shifts from offline to online.</p>
+    <p id="internetEvent" ></p>
+
+    <hr>
+
+    <h2>The <q><strong>Clipboard</strong></q> Events :-</h2>
+    <h2>The <q><strong>oncopy</strong></q> event :-</h2>
+    <p contenteditable="true" oncopy="copyFunction(this)">Copy this text 📋</p>
+    <p id="copiedText"></p>
+
+    <h2>The <q><strong>oncut</strong></q> Event :-</h2>
+    <p contenteditable="true" oncut="cutFunction(this)">Cut this text using <strong>Ctrl + X</strong></p>
+    <p id="cutText"></p>
+
+    <h2>The <q><strong>onpaste</strong></q> Event :-</h2>
+    <input type="text" placeholder="Paste Something into this field" size="40" onpaste="pasteFunction(this)">
+    <p id="pasteText"></p>
 
 
     <script>
@@ -141,7 +243,6 @@
         {
             id.innerHTML = "Hooray!. You clicked the text 😀🎉";
         }
-
         
         function displayDate()
         {
@@ -168,6 +269,10 @@
             const currentSeconds = new Date().getSeconds();
 
             document.getElementById('currentDate').innerHTML = `Date : ${currentDate}/${currentMonth + 1}/${currentYear} | Time : ${currentHour} : ${currentMinutes} : ${currentSeconds}`;;
+        }
+
+        function displayParagraph()  {
+            document.getElemeentById('displayedParagraph').innerHTML += `Horray You Double Clicked the above button and the paragraph is successfully displayed here😀😌👍`;
         }
 
         function checkCookies()
@@ -243,8 +348,86 @@
             object.innerHTML = `Thank You . Please click me again! 😌😀🎉`;
         }
 
+       document.getElementById('contextmenu').addEventListener('contextmenu', (event) => event.preventDefault());
+
+       function changePicture(element){
+        element.src = `/Images/Virat_Kohli.jpg`;
+        element.alt = `Virat Kohli Image`;
+        element.title = `Virat Kohli`;
+        element.width = 400;
+        element.height = 400;   
+       }
        
-       
+       function originalPicture(element){
+        element.src = `/Images/Ashwin1.jpg`;
+        element.alt = `Ashwin Profile Picture`;
+        element.title = `K. Ashwin`;
+        element.width = 300;
+        element.height = 400;
+       }
+
+       function mouseCoordinates(event)
+       {
+        let xCoordinate = event.clientX;
+        let yCoordinate = event.clientY;
+        currentCoordinate = `X : ${xCoordinate} \nY: ${yCoordinate}`;
+        document.getElementById('mouseMoveCoordinates').innerHTML = currentCoordinate;
+       }
+
+       function clearCoordinates() {
+        document.getElementById('mouseMoveCoordinates').innerHTML = "";
+       }
+
+       let a = 0;
+       function mouseOverFunction(){
+        document.getElementById('mouseoverDemo').innerHTML = a += 1;
+       }
+
+       let b= 0;
+       function mouseOutFunction(){
+        document.getElementById('mouseoutDemo').innerHTML = b += 1;
+       }
+
+       let c = 0;
+       function mouseEnterFunction()
+       {
+        document.getElementById('mouseenterDemo').innerHTML = c += 1;
+       }
+
+       let d = 0;
+       function mouseLeaveFunction()
+       {
+        document.getElementById('mouseleaveDemo').innerHTML = d += 1;
+       }
+
+       let e = 0;
+       function mouseMoveFunction(){
+        document.getElementById('mousemoveDemo').innerHTML = e += 1;
+       }
+
+       const contextMenuFunction = (event) => {
+        event.preventDefault();
+       }
+
+       const onlineEvent = () => {
+        document.getElementById('internetEvent').innerHTML = `The Browser is in online mode`;
+       }
+
+       const offlineEvent = () => {
+        document.getElementById('internetEvent').innerHTML = `The Browser went to offline mode`;
+       }
+
+       const copyFunction = (copyEvent) => {
+        document.getElementById('copiedText').innerHTML = `The Copied Text is : ${copyEvent.innerHTML}`;
+       }
+
+       const cutFunction = (cutEvent) => {
+        document.getElementById('cutText').innerHTML = `You Successfully cutted the text <br/> The Cutted Text is : ${cutEvent.innerHTML}`;
+       }
+
+       const pasteFunction = (pasteEvent) => {
+        document.getElementById('pasteText').innerHTML = `You Successfully pasted the text <br/> The Pasted Text is : ${pasteEvent.innerHTML}`;
+       }
 
     </script>
 </body>
