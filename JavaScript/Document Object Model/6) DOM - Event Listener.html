@@ -1,0 +1,390 @@
+<!-- 
+                                    DOM - Event Listener
+The "addEventListener()" method :-
+------------------------------------
+    The "addEventListener()" method attaches an event handler to the specified element.
+    The "addEventListener()" method attaches an event handler to an element without overwriting existing event handlers.
+    You can add many event handlers to one element.
+    You can add many event handlers of the same type to one element, i.e two "click" events.
+    You can add event listeners to any DOM object not only HTML elements. i.e the window object.
+    The "addEventListener()" method makes it easier to control how the event reacts to bubbling.
+    When using the "addEventListener()" method, the JavaScript is separated from the HTML markup, for better readability and allows you to add event listeners even when you do not control the HTML markup.
+    You can easily remove an event listener by using the "removeEventListener()" method.
+
+SYNTAX :-
+-----------
+    ----------------------------------------------------------------------
+    | <elemet>.addEventListener(event_name, functionName, [useCapture]); |
+    ----------------------------------------------------------------------
+Parameters :- 
+--------------
+    (i) event - HTML DOM Event ('onclick', 'ondblclick', etc)
+    (ii) function - A Callback Function or anonymous function
+    (iii) useCapture (optional) - It is a boolean value specifying whether to use "event bubbling" (or) "event capturing".
+
+--------------------------------------------------------------------------------------------------
+| NOTE :- You don't use the "on" prefix for the event. (ex : use 'click' instead of 'onclick') |
+--------------------------------------------------------------------------------------------------
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+    <link rel="icon" href="./../Images/Virat_Kohli.jpg" />
+
+    <style>
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+        font-family: Arial, Helvetica, sans-serif;
+        font-display: initial;
+      }
+
+      h2 {
+        text-decoration: underline;
+      }
+
+      #bubblingDiv,
+      #capturingDiv {
+        background-color: coral;
+        padding: 50px;
+      }
+
+      #bubblingPara,
+      #capturingPara {
+        background-color: white;
+        font-size: 20px;
+        border: 1px solid;
+        padding: 20px;
+      }
+
+      #removeEvent {
+        background-color: coral;
+        border: 2px solid black;
+        width: 100%;
+        height: 25vh;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Example to "addEventListener()" method -->
+    <h1>DOM - Event Listener</h1>
+    <h2>Example of <q>addEventListener()</q> method</h2>
+    <img
+      src="/Images/Ashwin1.jpg"
+      alt="K.Ashwin Image"
+      width="300"
+      height="400"
+      title="K.Ashwin"
+      id="imageSwap"
+    />
+
+    <hr />
+
+    <!-- Add an Event Handler to an Element without an external "named" function :- -->
+    <h2>Add an Event handler to an element :-</h2>
+    <input
+      type="button"
+      value="Click me for an alert message"
+      id="alertMessage"
+    />
+    <!-- Adding an Event Handler to an element with an external "named" function-->
+    <input
+      type="button"
+      value="Click me for an alert message"
+      id="alertSystem"
+    />
+
+    <hr />
+
+    <!-- 
+    Add many event handlers to the same event :-
+    ----------------------------------------------
+        The "addEventListener()" method allows you to add many events to teh same element without overwriting the existing events.
+        You can add events of different types to the same element
+     -->
+    <h2>Add many event handler to the same event :-</h2>
+    <input type="button" id="myButton" value="Click ME!" />
+    <br />
+    <img
+      src="/Images/Ashwin1.jpg"
+      alt="K.Ashwin Image"
+      width="300"
+      height="400"
+      title="K.Ashwin"
+      id="multipleEventHandler"
+    />
+
+    <hr />
+
+    <!-- 
+    Adding an event handler to the window object :- 
+    ------------------------------------------------
+        The "addEventListener()" method allows you to add the event listeners on any HTML DOM object such as elements, the HTML document, the window object or other objects that supports events, like the "xmlHttpRequest" object.
+    -->
+    <h2>Add an Event Handler to the Window Object :</h2>
+    <p>
+      Try resizing the window, the event handler will execute the
+      <q>resize</q> event
+    </p>
+    <p id="resizeWindow"></p>
+
+    <hr />
+
+    <!-- 
+    Passing Parameters to an event listener :-
+    ---------------------------------------------
+        When Passing Parameters / argument values, use an "anonymous function" that calls the specified function with the parameters
+
+    SYNTAX :-
+    ----------
+        -----------------------------------------------------------------------------
+        | <element>.addEventListener(event, function() {functionName(p1, p2, ...)}) |
+        -----------------------------------------------------------------------------
+     -->
+    <h2>Passing a Parameter / argument to the event Listener :-</h2>
+    <p>Click this button to perform the required calculations</p>
+    <input type="button" value="15 * 20 = ?" id="multiply" />
+    <p id="product"></p>
+
+    <hr />
+
+    <!-- 
+    Event Bubbling and Event capturing :-
+    --------------------------------------
+        There are 2 ways of event propagation in HTML DOM
+        (i) Bubbling and 
+        (ii) Capturing
+
+    Event Propagation :-
+    ---------------------
+        Event propagation is a way of defining the element order when an event occurs. 
+    Example :- If you have a <p> element inside a <div> element, and the user clicks on the <p> element, which element's "click" event should be handled first?
+
+    Bubbling :-
+    -----------
+        In bubbling the inner most element's event is handled first and then the outer: the <p> element's click event is handled first, then the <div> element's click event.
+    
+    Capturing :-
+    -------------
+        In capturing the outer most element's event is handled first and then the inner: the <div> element's click event will be handled first, then the <p> element's click event.
+
+    With the "addEventListener()" method you can specify the propagation type by using the "useCapture" parameter:
+
+    SYNTAX :-
+    ---------
+        addEventListener(event, function, [useCapture]);
+    The default is 'false' which will use the "event bubbling propagation". When the value sets to true, the event uses the "capturing propagation".
+     -->
+    <h2>Event Bubbling and Event Capturing</h2>
+    <div id="bubblingDiv">
+      <h2>Event Bubbling</h2>
+      <p id="bubblingPara">Click Me!</p>
+    </div>
+    <br />
+
+    <div id="capturingDiv">
+      <h2>Event Capturing</h2>
+      <p id="capturingPara">Click Me!</p>
+    </div>
+
+    <hr />
+
+    <!-- 
+    The 'removeEventListener()' method :-
+    ---------------------------------------
+        The 'removeEventListener()' method removes the event handlers that have been attached with the "addEventListener()" method.
+    SYNTAX :-
+    ---------
+        ----------------------------------------------------------
+        | <element>removeEventListener(eventName, functionName); |
+        -----------------------------------------------------------
+     -->
+    <div id="removeEvent">
+      <p id="randomNumber"></p>
+      <input
+        type="button"
+        value="Remove the Event"
+        onclick="removeEventHandler()"
+      />
+    </div>
+
+    <script>
+      // Example to "addEventListener()" method :-
+      document
+        .getElementById("imageSwap")
+        .addEventListener("mouseenter", imageSwap);
+      function imageSwap() {
+        let image = document.getElementById("imageSwap");
+        image.src = "/Images/Vidyut_Jamwal.jpeg";
+        image.alt = "Vidyut Jamwal Picture";
+        image.width = 400;
+        image.height = 300;
+        image.title = "Vidyut Jamwal";
+      }
+
+      document
+        .getElementById("imageSwap")
+        .addEventListener("mouseleave", originalImage);
+      function originalImage() {
+        let image = document.getElementById("imageSwap");
+        image.src = `/Images/Ashwin1.jpg`;
+        image.alt = "K. Ashwin Picture";
+        image.width = 300;
+        image.height = 400;
+        image.title = "K. Ashwin";
+      }
+
+      // Adding an event handler to an element without an external "named" function.
+      var element = document.getElementById("alertMessage");
+      element.addEventListener("click", () => {
+        alert(
+          "Adding an event handler to an element without refer to an external 'named' function"
+        );
+      });
+
+      // Adding an event handler to an element with a external "named" function.
+      var element = document.getElementById("alertSystem");
+      element.addEventListener("click", alertFunction);
+      function alertFunction() {
+        alert(
+          'Adding an event handler to an element with refer to an external "named" function'
+        );
+      }
+
+      // Add many event handlers to the same event :-
+      var buttonClick = document.getElementById("myButton");
+      buttonClick.addEventListener("click", () => {
+        alert("This is the first alert message");
+      });
+      buttonClick.addEventListener("click", () => {
+        alert("This is the second alert message");
+      });
+
+      //   You can add events of different types to the same element
+      var multipleEventHandling = document.getElementById(
+        "multipleEventHandler"
+      );
+      multipleEventHandling.addEventListener("mouseenter", () => {
+        let image = document.getElementById("multipleEventHandler");
+        image.src = "/Images/Vidyut_Jamwal.jpeg";
+        image.alt = "Vidyut Jamwal Picture";
+        image.width = 400;
+        image.height = 300;
+        image.title = "Vidyut Jamwal";
+      });
+
+      multipleEventHandling.addEventListener("mouseleave", () => {
+        let image = document.getElementById("multipleEventHandler");
+        image.src = `/Images/Ashwin1.jpg`;
+        image.alt = "K. Ashwin Picture";
+        image.width = 300;
+        image.height = 400;
+        image.title = "K. Ashwin";
+      });
+      multipleEventHandling.addEventListener("click", () => {
+        let image = document.getElementById("multipleEventHandler");
+        image.src = "/Images/Virat_Kohli.jpg";
+        image.alt = "Virat Kohli Picture";
+        image.width = 400;
+        image.height = 400;
+        image.title = "Virat Kohli";
+      });
+
+      //   Adding an event handler to the window object :-
+      window.addEventListener("resize", () => {
+        document.getElementById("resizeWindow").innerHTML = Math.round(
+          Math.random() * 100
+        );
+      });
+
+      /**
+    Passing Parameters to an event listener :-
+    --------------------------------------------
+      SYNTAX :-
+    ----------
+        -----------------------------------------------------------------------------
+        | <element>.addEventListener(event, function() {functionName(p1, p2, ...)}) |
+        -----------------------------------------------------------------------------
+    */
+      var firstNumber = parseInt(prompt("Enter the first number : "));
+      var secondNumber = parseInt(prompt("Enter the second number : "));
+      document
+        .getElementById("multiply")
+        .addEventListener("click", function () {
+          multiplication(firstNumber, secondNumber);
+        });
+
+      function multiplication(firstNumber, secondNumber) {
+        document.getElementById(
+          "product"
+        ).innerHTML = `${firstNumber} * ${secondNumber} = ${
+          firstNumber * secondNumber
+        }`;
+      }
+
+      /*
+      Event Propagation (Event Bubbling and Event capturing):- 
+      ----------------------------------------------------------
+      SYNTAX :-
+    ------------
+        addEventListener(event, function, [useCapture]);
+      */
+      document
+        .getElementById("bubblingPara")
+        .addEventListener(
+          "click",
+          () => alert("You clicked the para element"),
+          false
+        );
+      document
+        .getElementById("bubblingDiv")
+        .addEventListener(
+          "click",
+          () => alert("You clicked the div element"),
+          false
+        );
+      document
+        .getElementById("capturingPara")
+        .addEventListener(
+          "click",
+          () => alert("You clicked the para element"),
+          true
+        );
+      document
+        .getElementById("capturingDiv")
+        .addEventListener(
+          "click",
+          () => alert("You clicked the div element"),
+          true
+        );
+
+      /*
+        The 'removeEventListener()' method :-
+        --------------------------------------
+        SYNTAX :-
+        ---------
+        ----------------------------------------------------------
+        | <element>removeEventListener(eventName, functionName); |
+        -----------------------------------------------------------
+        */
+      document
+        .getElementById("removeEvent")
+        .addEventListener("mousemove", randomGenerator);
+      function randomGenerator() {
+        document.getElementById("randomNumber").innerHTML = Math.round(
+          Math.random() * 1000
+        );
+      }
+
+      function removeEventHandler() {
+        document
+          .getElementById("removeEvent")
+          .removeEventListener("mousemove", randomGenerator);
+      }
+    </script>
+  </body>
+</html>
